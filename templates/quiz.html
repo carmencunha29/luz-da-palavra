@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="progress mb-4" style="height: 10px;">
+            <div class="progress-bar bg-success" style="width: 10%"></div>
+        </div>
+        
+        <div class="card shadow p-4 border-0">
+            <form id="quizForm" method="POST" action="/resultado/">
+                {% csrf_token %}
+                <h3 class="fw-bold mb-4">Pergunta 1 de 10</h3>
+                <p class="lead">Com que frequência você reserva um tempo exclusivo para a oração diária?</p>
+                
+                <div class="d-grid gap-2 text-start">
+                    <input type="radio" class="btn-check" name="q1" id="a1" value="0">
+                    <label class="btn btn-outline-success p-3 text-start" for="a1">Raramente ou nunca</label>
+
+                    <input type="radio" class="btn-check" name="q1" id="a2" value="5">
+                    <label class="btn btn-outline-success p-3 text-start" for="a2">Algumas vezes por semana</label>
+
+                    <input type="radio" class="btn-check" name="q1" id="a3" value="10">
+                    <label class="btn btn-outline-success p-3 text-start" for="a3">Todos os dias</label>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-lg w-100 mt-5 shadow">PRÓXIMA PERGUNTA</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
