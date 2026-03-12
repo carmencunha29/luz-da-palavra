@@ -19,13 +19,15 @@ from django.contrib import admin
 from django.urls import path
 from django.shortcuts import render # Importamos o render para usar arquivos HTML
 
-# Função que carrega a sua página inicial (Home)
+# Função que carrega a sua página inicial
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'index.html') # Mudamos de home.html para index.html
+
+# Função que carregará o seu Quiz (pode manter index por enquanto ou criar o quiz.html depois)
+def quiz(request):
+    return render(request, 'index.html')
 
 # Função que carregará o seu Quiz
-def quiz(request):
-    return render(request, 'quiz.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
