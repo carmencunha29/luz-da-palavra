@@ -2,31 +2,46 @@
 {% block content %}
 <div class="max-w-3xl mx-auto py-12 px-6">
     <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-stone-100">
+        
         <div class="text-center mb-10">
-            <span class="text-emerald-700 font-bold text-sm uppercase tracking-widest">Passo 1 de 2</span>
-            <h2 class="text-3xl font-bold text-stone-900 mt-2">Avaliação de Momento Espiritual</h2>
-            <p class="text-stone-500 mt-2">Responda com sinceridade. Ninguém verá suas respostas além de você.</p>
+            <span class="text-emerald-700 font-bold text-sm uppercase tracking-wider">Passo Único</span>
+            <h2 class="text-3xl font-bold text-stone-900 mt-2">Avaliação de Rotina Espiritual</h2>
+            <p class="text-stone-500 mt-2">Responda com sinceridade. Ninguém além de você verá este resultado.</p>
         </div>
 
-        <form method="POST">
+        <form method="POST" class="space-y-8">
             {% csrf_token %}
-            
+
             {% for i in "1234567890" %}
-            <div class="mb-8 border-b border-stone-100 pb-6 last:border-b-0">
-                <p class="font-semibold text-stone-800 text-lg mb-3">
-                    {{ forloop.counter }}. Como você avalia sua constância na oração e leitura da Palavra hoje?
+            <div class="mb-8 border-b border-stone-100 pb-6 last:border-b-0 group">
+                
+                <p class="font-semibold text-stone-800 text-lg mb-3 transition-colors group-hover:text-emerald-800">
+                    {{ forloop.counter }}. Como você avalia sua constância neste ponto?
                 </p>
-                <div class="flex items-center justify-between text-sm text-stone-500 mb-2">
-                    <span>Raramente / Baixa</span>
-                    <span>Sempre / Alta</span>
+                
+                <div class="flex items-center justify-between text-sm font-medium text-stone-400 mb-2">
+                    <span class="text-rose-500">Raramente / Baixa</span>
+                    <span class="text-emerald-600">Sempre / Alta</span>
                 </div>
-                <input type="range" min="1" max="5" name="q{{ forloop.counter }}" class="w-100 h-2 bg-stone-200 rounded-lg appearance-none cursor-pointer accent-emerald-700">
+                
+                <div class="relative flex items-center">
+                    <input type="range" min="1" max="5" name="q{{ forloop.counter }}" value="3" 
+                        class="w-full h-2 bg-stone-100 rounded-lg appearance-none cursor-pointer accent-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-200 transition-all">
+                </div>
+                
+                <div class="flex justify-between px-1 text-xs text-stone-400 mt-2 font-bold">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
             </div>
             {% endfor %}
 
-            <button type="submit" class="w-full bg-emerald-700 text-white py-4 rounded-full text-lg font-bold hover:bg-emerald-800 transition shadow-lg mt-4 flex justify-center items-center gap-2">
-                Ver Meu Resultado 
-                <span>→</span>
+            <button type="submit" class="w-full bg-emerald-700 text-white font-bold py-4 px-6 rounded-full hover:bg-emerald-800 transition shadow-lg hover:shadow-emerald-100 hover:scale-[1.02] transform duration-300 flex items-center justify-center gap-2 group">
+                Ver Meu Resultado
+                <span class="transition-transform group-hover:translate-x-1">→</span>
             </button>
         </form>
     </div>
