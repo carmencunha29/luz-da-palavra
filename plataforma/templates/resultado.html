@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="max-w-3xl mx-auto py-12 px-6">
+    <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-stone-100 text-center">
+        
+        <div class="w-16 h-16 bg-emerald-50 text-emerald-700 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+            🌿
+        </div>
+        
+        <span class="text-emerald-700 font-bold text-sm uppercase tracking-widest">Seu Diagnóstico Está Pronto</span>
+        <h2 class="text-3xl font-bold text-stone-900 mt-2 mb-4">Identificamos o seu Perfil Espiritual</h2>
+        
+        <div class="bg-stone-50 rounded-2xl p-6 mb-8 text-left border border-stone-100">
+            <h3 class="font-bold text-stone-800 text-lg mb-2">Perfil: Buscador em Reconstrução</h3>
+            <p class="text-stone-600 text-sm leading-relaxed">
+                Você tem o desejo sincero de estar mais perto de Deus, mas as distrações do dia a dia e a falta de uma rotina estruturada têm abafado sua vida devocional. Você precisa de passos práticos e diários para blindar sua mente.
+            </p>
+        </div>
+
+        <p class="text-stone-600 mb-8 max-w-xl mx-auto">
+            Para te ajudar a sair desse estado e viver uma fé inabalável, preparamos um plano personalizado de 4 semanas. 
+            <strong>Comece hoje mesmo com 7 dias totalmente gratuitos!</strong>
+        </p>
+        
+        <div class="space-y-4">
+            <a href="/checkout/" class="bg-emerald-700 text-white w-full sm:w-auto px-8 py-4 rounded-full text-lg font-bold hover:bg-emerald-800 transition shadow-lg inline-flex justify-center items-center gap-2">
+                Experimentar 7 Dias Grátis 
+                <span>→</span>
+            </a>
+            <p class="text-xs text-stone-400">Após os 7 dias, apenas R$ 12,00/mês. Cancele quando quiser.</p>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

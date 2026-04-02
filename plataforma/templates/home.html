@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="max-w-4xl mx-auto py-12 px-6">
+    
+    <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-emerald-800 mb-2">Luz da Palavra 📖</h1>
+        <p class="text-lg text-stone-600">Encontre paz e direcionamento através do estudo profundo das Escrituras.</p>
+    </div>
+    
+    <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-stone-100 mb-8">
+        <h2 class="text-2xl font-bold text-center text-stone-900 mb-8">Qual o seu foco de hoje?</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            
+            <button class="border-2 border-stone-100 rounded-2xl p-6 text-left transition-all duration-300 hover:border-emerald-500 hover:bg-emerald-50 focus:ring-2 focus:ring-emerald-500 outline-none group">
+                <span class="text-3xl block mb-3 group-hover:scale-110 transition-transform">🌿</span>
+                <span class="font-semibold text-stone-800 group-hover:text-emerald-900">Superar a Ansiedade</span>
+            </button>
+
+            <button class="border-2 border-stone-100 rounded-2xl p-6 text-left transition-all duration-300 hover:border-emerald-500 hover:bg-emerald-50 focus:ring-2 focus:ring-emerald-500 outline-none group">
+                <span class="text-3xl block mb-3 group-hover:scale-110 transition-transform">💡</span>
+                <span class="font-semibold text-stone-800 group-hover:text-emerald-900">Sabedoria na Vida</span>
+            </button>
+
+            <button class="border-2 border-stone-100 rounded-2xl p-6 text-left transition-all duration-300 hover:border-emerald-500 hover:bg-emerald-50 focus:ring-2 focus:ring-emerald-500 outline-none group">
+                <span class="text-3xl block mb-3 group-hover:scale-110 transition-transform">🏠</span>
+                <span class="font-semibold text-stone-800 group-hover:text-emerald-900">Fortalecer a Família</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="bg-emerald-800 text-white rounded-3xl p-8 md:p-10 text-center shadow-lg mb-8 transition-transform hover:scale-[1.01] duration-300">
+        <h3 class="text-xl font-bold mb-2">Deseja saber como está a sua conexão espiritual?</h3>
+        <p class="text-emerald-100 mb-6 text-sm">Responda a perguntas profundas e receba seu diagnóstico.</p>
+        
+        <a href="/quiz/" class="bg-white text-emerald-800 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2 hover:bg-emerald-50 transition shadow-md">
+            Fazer o Quiz Gratuito <span>→</span>
+        </a>
+    </div>
+
+    <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-stone-100 text-center">
+        <p class="text-stone-600 text-lg mb-6">Receba o nosso Guia de Estudo Essencial por apenas **$12**.</p>
+        
+        <div class="mb-4">
+            <a href="/checkout/" class="inline-flex bg-emerald-700 text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-emerald-800 transition shadow-lg hover:scale-105 transform duration-300">
+                ADQUIRIR GUIA COMPLETO
+            </a>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-xs text-stone-400 mt-6 border-t border-stone-50 pt-6">
+            <span>📧 Acesso imediato via e-mail</span>
+            <span class="hidden sm:inline">|</span>
+            <span>🔒 Pagamento Seguro via PayPal</span>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
